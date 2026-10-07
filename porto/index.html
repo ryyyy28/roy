@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roy | Creative Multimedia & Visual Creator</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Portfolio interaktif & bio-link Roy - Creative Multimedia & Visual Creator dengan estetika Modern Liquid Glassmorphism.">
+  <meta name="keywords" content="Roy, Portfolio, Bio-link, Linktree, Visual Creator, Graphic Designer, Videographer, Multimedia">
+  <meta name="author" content="Roy">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Roy | Creative Multimedia & Visual Creator">
+  <meta property="og:description" content="Kreator konten visual yang berfokus pada multimedia dan teknologi, berpengalaman dalam desain grafis, fotografi, serta videografi dan editor video.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              cyan: '#00f2fe',
+              blue: '#4facfe',
+              violet: '#7928ca',
+              pink: '#ff0080',
+              emerald: '#10b981',
+            }
+          },
+          animation: {
+            'orb-1': 'floatOrb1 20s ease-in-out infinite alternate',
+            'orb-2': 'floatOrb2 25s ease-in-out infinite alternate',
+            'orb-3': 'floatOrb3 22s ease-in-out infinite alternate',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+            'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+              '50%': { opacity: '0.9', transform: 'scale(1.05)' },
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-base: #e8eef5;
+      --text-main: #0f172a;
+      --text-muted: #334155;
+      --glass-bg: rgba(255, 255, 255, 0.45);
+      --glass-bg-hover: rgba(255, 255, 255, 0.62);
+      --glass-border: rgba(255, 255, 255, 0.72);
+      --glass-border-hover: rgba(255, 255, 255, 0.95);
+      --glass-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95), inset 0 0 0 1px rgba(255, 255, 255, 0.45), 0 22px 45px -15px rgba(30, 41, 59, 0.14), 0 4px 14px -2px rgba(30, 41, 59, 0.06);
+      --glass-glare: rgba(255, 255, 255, 0.55);
+      --glass-bevel: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.45) 40%, rgba(255, 255, 255, 0.12) 100%);
+      --toast-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.18), inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95);
+      --orb-opacity-1: 0.55;
+      --orb-opacity-2: 0.48;
+      --orb-opacity-3: 0.42;
+    }
+
+    html.dark {
+      --bg-base: #080c14;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --glass-bg: rgba(255, 255, 255, 0.045);
+      --glass-bg-hover: rgba(255, 255, 255, 0.075);
+      --glass-border: rgba(255, 255, 255, 0.14);
+      --glass-border-hover: rgba(255, 255, 255, 0.28);
+      --glass-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.06), 0 24px 48px -12px rgba(0, 0, 0, 0.55), 0 0 25px -5px rgba(0, 242, 254, 0.1);
+      --glass-glare: rgba(255, 255, 255, 0.14);
+      --glass-bevel: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.08) 35%, rgba(255, 255, 255, 0.02) 100%);
+      --toast-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55), inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+      --orb-opacity-1: 0.58;
+      --orb-opacity-2: 0.48;
+      --orb-opacity-3: 0.42;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+    }
+
+    /* Apple VisionOS & iOS 18 Precision Liquid Glassmorphism */
+    .liquid-glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(32px) saturate(200%) contrast(102%);
+      -webkit-backdrop-filter: blur(32px) saturate(200%) contrast(102%);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.15s ease-out;
+      will-change: transform;
+    }
+
+    .liquid-glass:hover {
+      background: var(--glass-bg-hover);
+      border-color: var(--glass-border-hover);
+    }
+
+    /* Cursor-Following Optical Glare & Specular Refraction on Cards */
+    .interactive-card {
+      position: relative;
+      isolation: isolate;
+      border-radius: 24px !important;
+    }
+
+    .interactive-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        var(--glass-glare),
+        transparent 45%
+      );
+      opacity: 0;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .interactive-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Apple Top-Bevel Light Refraction Border */
+    .interactive-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: var(--glass-bevel);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Fluid Liquid Morphing Animations for Ambient Orbs */
+    @keyframes morphOrb {
+      0%, 100% {
+        border-radius: 45% 55% 65% 35% / 40% 45% 55% 60%;
+      }
+      33% {
+        border-radius: 65% 35% 45% 55% / 55% 60% 40% 45%;
+      }
+      66% {
+        border-radius: 35% 65% 55% 45% / 45% 35% 65% 55%;
+      }
+    }
+
+    @keyframes floatOrb1 {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      50% {
+        transform: translate3d(80px, 60px, 0) scale(1.15);
+      }
+      100% {
+        transform: translate3d(-40px, 120px, 0) scale(0.92);
+      }
+    }
+
+    @keyframes floatOrb2 {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      50% {
+        transform: translate3d(-100px, -80px, 0) scale(1.18);
+      }
+      100% {
+        transform: translate3d(60px, -40px, 0) scale(0.95);
+      }
+    }
+
+    @keyframes floatOrb3 {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      50% {
+        transform: translate3d(90px, -70px, 0) scale(1.12);
+      }
+      100% {
+        transform: translate3d(-70px, 50px, 0) scale(0.88);
+      }
+    }
+
+    .orb-1 {
+      animation: floatOrb1 22s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate,
+                 morphOrb 16s ease-in-out infinite;
+      will-change: transform, border-radius;
+    }
+
+    .orb-2 {
+      animation: floatOrb2 26s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate,
+                 morphOrb 20s ease-in-out infinite reverse;
+      will-change: transform, border-radius;
+    }
+
+    .orb-3 {
+      animation: floatOrb3 24s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate,
+                 morphOrb 18s ease-in-out infinite;
+      will-change: transform, border-radius;
+    }
+
+    /* VisionOS Dynamic Island Toast */
+    #toast {
+      backdrop-filter: blur(32px) saturate(200%) contrast(102%);
+      -webkit-backdrop-filter: blur(32px) saturate(200%) contrast(102%);
+      box-shadow: var(--toast-shadow);
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased font-sans transition-colors duration-500 overflow-x-hidden selection:bg-cyan-500 selection:text-white relative">
+  
+  <!-- Ambient Liquid Glowing Orbs -->
+  <div id="ambient-bg" class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+    <!-- Orb 1: Cyan / Sky -->
+    <div class="orb-1 absolute -top-24 -left-24 w-80 sm:w-[480px] h-80 sm:h-[480px] rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 blur-[80px] sm:blur-[110px] opacity-[var(--orb-opacity-1)] transition-opacity duration-700"></div>
+    
+    <!-- Orb 2: Violet / Purple -->
+    <div class="orb-2 absolute top-1/3 -right-24 w-80 sm:w-[460px] h-80 sm:h-[460px] rounded-full bg-gradient-to-tr from-purple-600 via-violet-500 to-fuchsia-500 blur-[80px] sm:blur-[120px] opacity-[var(--orb-opacity-2)] transition-opacity duration-700"></div>
+    
+    <!-- Orb 3: Pink / Amber -->
+    <div class="orb-3 absolute -bottom-24 left-1/4 w-80 sm:w-[500px] h-80 sm:h-[500px] rounded-full bg-gradient-to-tl from-pink-500 via-rose-500 to-amber-400 blur-[90px] sm:blur-[130px] opacity-[var(--orb-opacity-3)] transition-opacity duration-700"></div>
+    
+    <!-- Delicate Noise / Glass Grid Overlay -->
+    <div class="absolute inset-0 bg-[radial-gradient(rgba(100,116,139,0.07)_1px,transparent_1px)] dark:bg-[radial-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+  </div>
+
+  <div id="app" class="relative z-10 min-h-screen flex flex-col justify-between items-center px-4 py-6 sm:py-10 w-full max-w-xl mx-auto">
+    <!-- Top Action Bar -->
+    <header class="w-full flex justify-end items-center mb-6 animate-fade-in-up" style="animation-delay: 50ms;">
+      <button id="theme-toggle" type="button" aria-label="Ganti Tema Tampilan" class="liquid-glass group relative p-2.5 sm:p-3 rounded-2xl flex items-center justify-center text-slate-700 dark:text-slate-200 hover:text-cyan-500 dark:hover:text-cyan-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 transition-all active:scale-95 cursor-pointer">
+        <!-- Sun Icon for Dark Mode (click to switch to light) -->
+        <i data-lucide="sun" id="theme-icon-sun" class="w-5 h-5 transition-transform duration-500 hidden dark:block group-hover:rotate-45"></i>
+        <!-- Moon Icon for Light Mode (click to switch to dark) -->
+        <i data-lucide="moon" id="theme-icon-moon" class="w-5 h-5 transition-transform duration-500 block dark:hidden group-hover:-rotate-12"></i>
+      </button>
+    </header>
+
+    <!-- Header Profile Section -->
+    <section class="w-full flex flex-col items-center text-center animate-fade-in-up" style="animation-delay: 100ms;">
+      <!-- Avatar with Liquid Glow Animated Border -->
+      <div class="relative group mb-5">
+        <!-- Liquid Glow Aura -->
+        <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-pink-500 blur-md opacity-70 group-hover:opacity-100 animate-pulse-glow transition-opacity duration-500"></div>
+        
+        <!-- Avatar Wrapper -->
+        <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-tr from-cyan-400 via-violet-500 to-pink-500 shadow-xl overflow-hidden">
+          <img 
+            src="asset foto/zoey.png" 
+            alt="Foto Profil Roy" 
+            class="w-full h-full object-cover rounded-full bg-slate-800 transition-transform duration-500 group-hover:scale-105"
+            loading="eager"
+          />
+        </div>
+
+        <!-- Online / Active Status Dot -->
+        <div class="absolute bottom-1 right-2 w-5 h-5 rounded-full bg-emerald-500 border-2 border-slate-900 shadow-sm flex items-center justify-center" title="Available for projects">
+          <span class="w-2 h-2 rounded-full bg-white animate-ping opacity-75"></span>
+        </div>
+      </div>
+
+      <!-- Display Name & Verified Badge -->
+      <div class="flex items-center justify-center gap-2 mb-2">
+        <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 dark:from-white dark:via-slate-100 dark:to-slate-300 bg-clip-text text-transparent">
+          Roy
+        </h1>
+        <div class="inline-flex items-center justify-center text-cyan-500 dark:text-cyan-400" title="Verified Creator">
+          <i data-lucide="badge-check" class="w-6 h-6 fill-cyan-500/10"></i>
+        </div>
+      </div>
+
+      <!-- Tagline Pill Badge -->
+      <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs sm:text-sm font-bold tracking-wide liquid-glass text-cyan-800 dark:text-cyan-300 border border-cyan-500/25 mb-4 shadow-sm">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+        <span>Creative Multimedia & Visual Creator</span>
+      </div>
+
+      <!-- Bio Description -->
+      <p class="max-w-md text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300/90 font-normal px-2">
+        Kreator konten visual yang berfokus pada multimedia dan teknologi, berpengalaman dalam desain grafis, fotografi, serta videografi dan editor video.
+      </p>
+    </section>
+
+    <!-- Main Links Container (Task 4 & 5) -->
+    <main id="main-content" class="w-full flex flex-col gap-3.5 my-6">
+      
+      <!-- Instagram Card -->
+      <a 
+        href="https://www.instagram.com/royyyy_28/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="interactive-card liquid-glass group relative flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 transform-gpu overflow-hidden no-underline active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+        style="animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 150ms forwards; opacity: 0;"
+      >
+        <div class="flex items-center gap-3.5 sm:gap-4 z-10">
+          <!-- Icon with Instagram Gradient Glow -->
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white shadow-md shadow-pink-500/20 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+          </div>
+          <div class="text-left">
+            <h2 class="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100 group-hover:text-pink-500 dark:group-hover:text-pink-400 transition-colors">
+              Instagram
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              @royyyy_28 &bull; Visual Feed & Daily Stories
+            </p>
+          </div>
+        </div>
+        <div class="z-10 text-slate-400 dark:text-slate-500 group-hover:text-pink-500 dark:group-hover:text-pink-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+          <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+        </div>
+      </a>
+
+      <!-- TikTok Card -->
+      <a 
+        href="https://www.tiktok.com/@rooyyy28" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="interactive-card liquid-glass group relative flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 transform-gpu overflow-hidden no-underline active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+        style="animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 220ms forwards; opacity: 0;"
+      >
+        <div class="flex items-center gap-3.5 sm:gap-4 z-10">
+          <!-- Icon with TikTok Duo Glow -->
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-slate-900 text-white shadow-md shadow-cyan-500/20 group-hover:scale-110 transition-transform duration-300 border border-slate-700/50">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+            </svg>
+          </div>
+          <div class="text-left">
+            <h2 class="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors">
+              TikTok
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              @rooyyy28 &bull; Short Video Edits & Trends
+            </p>
+          </div>
+        </div>
+        <div class="z-10 text-slate-400 dark:text-slate-500 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+          <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+        </div>
+      </a>
+
+      <!-- Discord Community Card -->
+      <a 
+        href="https://discord.gg/QPMtCZfHaS" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="interactive-card liquid-glass group relative flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 transform-gpu overflow-hidden no-underline active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+        style="animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 290ms forwards; opacity: 0;"
+      >
+        <div class="flex items-center gap-3.5 sm:gap-4 z-10">
+          <!-- Icon with Discord Blurple Glow -->
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-[#5865F2] text-white shadow-md shadow-[#5865F2]/25 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+          </div>
+          <div class="text-left">
+            <h2 class="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">
+              Discord Community
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              Join Server &bull; Ngobrol & Sharing Kreatif
+            </p>
+          </div>
+        </div>
+        <div class="z-10 text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+          <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+        </div>
+      </a>
+
+      <!-- Telegram Channel Card -->
+      <a 
+        href="https://t.me/ryuuxien" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="interactive-card liquid-glass group relative flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 transform-gpu overflow-hidden no-underline active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+        style="animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 360ms forwards; opacity: 0;"
+      >
+        <div class="flex items-center gap-3.5 sm:gap-4 z-10">
+          <!-- Icon with Telegram Sky Blue Glow -->
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-[#229ED9] text-white shadow-md shadow-[#229ED9]/25 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-1.92 9.07c-.15.65-.53.81-1.08.51l-2.98-2.2-1.44 1.39c-.16.16-.29.29-.6.29l.21-3.04 5.54-5.01c.24-.22-.05-.34-.38-.13l-6.85 4.31-2.94-.92c-.64-.2-.65-.64.13-.95l11.51-4.44c.53-.2 1 .12.81 1.12z"/>
+            </svg>
+          </div>
+          <div class="text-left">
+            <h2 class="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100 group-hover:text-sky-500 dark:group-hover:text-sky-400 transition-colors">
+              Telegram
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              @ryuuxien &bull; Saluran Update & Diskusi
+            </p>
+          </div>
+        </div>
+        <div class="z-10 text-slate-400 dark:text-slate-500 group-hover:text-sky-500 dark:group-hover:text-sky-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+          <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+        </div>
+      </a>
+
+      <!-- WhatsApp Business Card -->
+      <a 
+        href="https://wa.me/6281188872129" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="interactive-card liquid-glass group relative flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 transform-gpu overflow-hidden no-underline active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+        style="animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 430ms forwards; opacity: 0;"
+      >
+        <div class="flex items-center gap-3.5 sm:gap-4 z-10">
+          <!-- Icon with WhatsApp Emerald Glow -->
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-[#25D366] text-white shadow-md shadow-[#25D366]/25 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 0C5.396 0 .017 5.378.017 12.013c0 2.12.553 4.188 1.603 6.01L.004 24l6.155-1.614c1.76.958 3.743 1.463 5.867 1.463 6.635 0 12.018-5.38 12.018-12.016C24.044 5.378 18.666 0 12.031 0zm.005 21.84c-1.815 0-3.593-.487-5.146-1.408l-.369-.219-3.824 1.002 1.022-3.727-.24-.383A9.824 9.824 0 0 1 2.18 12.013c0-5.431 4.417-9.849 9.856-9.849 5.438 0 9.855 4.418 9.855 9.849 0 5.431-4.417 9.847-9.855 9.847zm5.405-7.37c-.296-.148-1.752-.865-2.023-.964-.272-.099-.469-.148-.667.149-.197.296-.764.964-.937 1.162-.173.198-.345.223-.642.074s-1.255-.462-2.39-1.474c-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.346.446-.519.148-.173.198-.297.297-.495.099-.198.05-.371-.025-.519-.074-.148-.667-1.608-.914-2.203-.241-.579-.487-.501-.668-.51-.173-.008-.371-.01-.569-.01s-.519.074-.79.371c-.272.297-1.039 1.015-1.039 2.476 0 1.46 1.064 2.871 1.212 3.07.149.198 2.095 3.2 5.076 4.487.709.307 1.263.49 1.694.627.712.227 1.36.195 1.872.118.571-.085 1.752-.716 1.999-1.408.247-.692.247-1.285.173-1.408-.074-.124-.272-.198-.568-.346z"/>
+            </svg>
+          </div>
+          <div class="text-left">
+            <h2 class="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors">
+              WhatsApp Business
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              +62 811-8887-2129 &bull; Fast Response & Project Inquiry
+            </p>
+          </div>
+        </div>
+        <div class="z-10 text-slate-400 dark:text-slate-500 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+          <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+        </div>
+      </a>
+
+      <!-- Gaming Profiles Sub-Section Header -->
+      <div class="pt-4 pb-1 flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 animate-fade-in-up" style="animation-delay: 500ms;">
+        <i data-lucide="gamepad-2" class="w-4 h-4 text-cyan-500"></i>
+        <span>Gaming Profiles & IDs</span>
+        <div class="flex-1 h-px bg-gradient-to-r from-slate-300 dark:from-slate-700 to-transparent"></div>
+      </div>
+
+      <!-- Roblox Profile Card -->
+      <div 
+        class="interactive-card liquid-glass relative flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 transform-gpu overflow-hidden active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+        style="animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 540ms forwards; opacity: 0;"
+      >
+        <div class="flex items-center gap-3.5 sm:gap-4 z-10">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-red-600 to-red-800 text-white shadow-md shadow-red-500/20">
+            <!-- Roblox stylized square icon -->
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M5.166 0L0 18.834 18.834 24 24 5.166 5.166 0zm8.384 14.15l-3.699-1.015 1.015-3.699 3.699 1.015-1.015 3.699z"/>
+            </svg>
+          </div>
+          <div class="text-left">
+            <div class="flex items-center gap-2">
+              <h2 class="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100">
+                Roblox
+              </h2>
+              <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-red-500/10 text-red-700 dark:text-red-400 border border-red-500/20">Active</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-mono tracking-wide">
+              Username: <strong class="text-slate-700 dark:text-slate-200">royyy289</strong>
+            </p>
+          </div>
+        </div>
+        <button 
+          type="button" 
+          onclick="copyToClipboard('royyy289', 'Username Roblox royyy289')"
+          data-copy="royyy289"
+          class="copy-btn z-10 px-3 py-2 rounded-xl text-xs sm:text-sm font-bold liquid-glass flex items-center gap-1.5 text-cyan-800 dark:text-cyan-300 hover:text-cyan-600 dark:hover:text-cyan-200 border border-cyan-500/30 hover:border-cyan-400 transition-all active:scale-95 cursor-pointer shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+          title="Salin Username Roblox"
+        >
+          <i data-lucide="copy" class="w-4 h-4"></i>
+          <span>Salin</span>
+        </button>
+      </div>
+
+      <!-- Mobile Legends (MLBB) Profile Card -->
+      <div 
+        class="interactive-card liquid-glass relative flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 transform-gpu overflow-hidden active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+        style="animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 600ms forwards; opacity: 0;"
+      >
+        <div class="flex items-center gap-3.5 sm:gap-4 z-10">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-amber-500 via-orange-600 to-indigo-900 text-white shadow-md shadow-amber-500/20">
+            <i data-lucide="swords" class="w-6 h-6"></i>
+          </div>
+          <div class="text-left">
+            <div class="flex items-center gap-2">
+              <h2 class="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100">
+                Mobile Legends (MLBB)
+              </h2>
+              <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">Slot ID</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-mono tracking-wide">
+              ID: <strong class="text-slate-700 dark:text-slate-200">mabar?tag di discord</strong>
+            </p>
+          </div>
+        </div>
+        <button 
+          type="button" 
+          onclick="copyToClipboard('mabar?tag di discord', 'Pesan mabar Mobile Legends')"
+          data-copy="mabar?tag di discord"
+          class="copy-btn z-10 px-3 py-2 rounded-xl text-xs sm:text-sm font-bold liquid-glass flex items-center gap-1.5 text-amber-800 dark:text-amber-300 hover:text-amber-600 dark:hover:text-amber-200 border border-amber-500/30 hover:border-amber-400 transition-all active:scale-95 cursor-pointer shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+          title="Salin ID MLBB"
+        >
+          <i data-lucide="copy" class="w-4 h-4"></i>
+          <span>Salin</span>
+        </button>
+      </div>
+
+    </main>
+
+    <!-- Floating Liquid Toast Notification -->
+    <div 
+      id="toast" 
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-8 transition-all duration-300 ease-out flex items-center gap-2.5 px-5 py-3 rounded-full liquid-glass shadow-2xl border border-cyan-400/40 text-slate-800 dark:text-slate-100 text-xs sm:text-sm font-medium"
+      role="status" 
+      aria-live="polite"
+    >
+      <div class="w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+        <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+      </div>
+      <span id="toast-message">Tersalin ke clipboard!</span>
+    </div>
+
+    <!-- Footer Container (Task 6) -->
+    <footer id="footer-container" class="w-full mt-12 mb-4 text-center animate-fade-in-up" style="animation-delay: 680ms;">
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium tracking-wide">
+        © 2026 Roy. All rights reserved.
+      </p>
+      <div class="inline-flex items-center gap-2 mt-2 px-3 py-1 rounded-full text-[11px] font-medium text-slate-500 dark:text-slate-400 liquid-glass border border-slate-300/40 dark:border-white/10 shadow-sm">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span>Modern Liquid Glassmorphism</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Theme Management Logic
+    (function initTheme() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const htmlEl = document.documentElement;
+
+      function getPreferredTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          return savedTheme;
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          htmlEl.classList.add('dark');
+        } else {
+          htmlEl.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+      }
+
+      // Initialize theme on load
+      applyTheme(getPreferredTheme());
+
+      // Toggle Theme Listener
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const currentIsDark = htmlEl.classList.contains('dark');
+          const newTheme = currentIsDark ? 'light' : 'dark';
+          applyTheme(newTheme);
+        });
+      }
+
+      // Listen for system changes if user hasn't set explicit manual preference
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          applyTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    })();
+
+    // Clipboard Copy & Toast Feedback Function
+    let toastTimeout = null;
+    function copyToClipboard(text, label) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+
+      function showToast() {
+        if (toast && toastMessage) {
+          toastMessage.textContent = `${label || text} berhasil disalin!`;
+          toast.classList.remove('opacity-0', 'translate-y-8', 'pointer-events-none');
+          toast.classList.add('opacity-100', 'translate-y-0');
+
+          if (toastTimeout) clearTimeout(toastTimeout);
+          toastTimeout = setTimeout(() => {
+            toast.classList.remove('opacity-100', 'translate-y-0');
+            toast.classList.add('opacity-0', 'translate-y-8', 'pointer-events-none');
+          }, 2400);
+        }
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text)
+          .then(showToast)
+          .catch(() => fallbackCopy(text, showToast));
+      } else {
+        fallbackCopy(text, showToast);
+      }
+    }
+
+    function fallbackCopy(text, callback) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.setAttribute('readonly', '');
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      textArea.setSelectionRange(0, 99999);
+      try {
+        document.execCommand('copy');
+        if (callback) callback();
+      } catch (err) {
+        console.error('Gagal menyalin:', err);
+      }
+      document.body.removeChild(textArea);
+    }
+
+    // 3D Magnetic Card Tilt Interaction (60fps requestAnimationFrame)
+    (function init3DTilt() {
+      const cards = document.querySelectorAll('.interactive-card');
+      const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      cards.forEach(card => {
+        // Release CSS animation transform lock once initial fadeInUp completes
+        card.addEventListener('animationend', () => {
+          card.style.animation = 'none';
+          card.style.opacity = '1';
+        });
+
+        if (supportsHover) {
+          let isHovered = false;
+          let rAFId = null;
+          let mouseX = 0;
+          let mouseY = 0;
+          let cardRect = null;
+
+          card.addEventListener('mouseenter', () => {
+            isHovered = true;
+            cardRect = card.getBoundingClientRect();
+            card.style.transition = 'none';
+          });
+
+          card.addEventListener('mousemove', (e) => {
+            if (!cardRect) cardRect = card.getBoundingClientRect();
+            mouseX = e.clientX - cardRect.left - cardRect.width / 2;
+            mouseY = e.clientY - cardRect.top - cardRect.height / 2;
+
+            const relX = ((e.clientX - cardRect.left) / cardRect.width) * 100;
+            const relY = ((e.clientY - cardRect.top) / cardRect.height) * 100;
+            card.style.setProperty('--mouse-x', `${relX.toFixed(1)}%`);
+            card.style.setProperty('--mouse-y', `${relY.toFixed(1)}%`);
+
+            if (rAFId) cancelAnimationFrame(rAFId);
+            rAFId = requestAnimationFrame(() => {
+              if (!isHovered) return;
+              const rotateX = (-mouseY / (cardRect.height / 2)) * 8;
+              const rotateY = (mouseX / (cardRect.width / 2)) * 8;
+              card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+          });
+
+          card.addEventListener('mouseleave', () => {
+            isHovered = false;
+            cardRect = null;
+            if (rAFId) cancelAnimationFrame(rAFId);
+            card.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+            card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+          });
+        }
+      });
+    })();
+
+    // Initialize Lucide Icons
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
